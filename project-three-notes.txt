@@ -1,0 +1,29 @@
+Project three
+
+Reaching MVC... what is my defined goal?
+1. Works in browser
+2. Mobile responsive
+3. Use all aspects of MERN within project
+Create a production schedule
+Pitch my idea to teacher (gas station app)
+gas price api - this connects to my website usings 'FETCH' and 'AXIOS'
+PWA
+https://www.eia.gov/dnav/pet/
+MERN
+Mongoose (Users, search, ect...)
+Express (api routes)
+React (render the before and after of results)
+Node
+
+Deliverables that i need to get ready for the teacher
+Elevator pitch
+ERD
+Wireframe
+
+What type of feature does my app add to the already existing gas apps out there?
+--- maybe when and where gas is available
+https://collec tapi.com/api/gasPrice/gas-prices-api/stateUsaPrice
+
+For making my ERD...
+https://dbdiagram.io/d
+

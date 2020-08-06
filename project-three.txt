@@ -1,0 +1,6 @@
+Project three
+
+1. Github setup
+2. GH Projects setup
+3. React work environment setup
+4. GH Pages push to Github
