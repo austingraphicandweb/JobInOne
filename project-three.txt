@@ -1,6 +1,6 @@
 Project three
 
-1. Github setup
-2. GH Projects setup
-3. React work environment setup
-4. GH Pages push to Github
+1. MERN stack environment setup
+2. deploy to heroku
+3. github repo created
+4. apply to different api's to find which will work the best (in progress)
