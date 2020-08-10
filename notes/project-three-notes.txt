@@ -31,8 +31,16 @@ Job sites to place api calls to:
 2. User Authentication
 3. Saving results option
 
+Monster api query url build: 
+https://api.jobs.com/v2/search/jobs?title=""&careerlevel=""&poastalcode=""
 
-Elevator pitch:
-Now you can go to one page, fill out specific search parameters, and quickly search multiple job boards all in one place so that you do not have to flip from tab to tab in your browser.
+Hello,
+
+I am a student at Georgia Tech. I am working on my final project for the class. The project requires usage of various job search api's and I thought that yours was a good fit for the requirements. Is it possible to be granted access to an API key so that I can use a query URL related to your website within my project?
+
+My number is 404-660-8629
+My email is austingraphicandweb@gmail.com
+
+Thank you!
 
 All routes will be in the backend in MERN for the project
