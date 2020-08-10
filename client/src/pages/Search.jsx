@@ -33,7 +33,7 @@ export default function ContainedButtons() {
                 {/**
               * show results form.
               */}
-                <p>Output of results from the api call.</p>
+                <p>Output of results from the api call will go here.</p>
             </div>
         </div>
     );
