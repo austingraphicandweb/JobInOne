@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
 
-class Search extends Component {
-    render() {
+function Stateless() {
         return (
             <div>
-                
+                <form className={classes.root} noValidate autoComplete="off">
+                    <TextField id="standard-basic" label="Standard" />
+                    <TextField id="filled-basic" label="Filled" variant="filled" />
+                    <TextField id="outlined-basic" label="Outlined" variant="outlined" />
+                </form>
             </div>
         );
     }
-}
 
-export default Search;
+export default Stateless;
