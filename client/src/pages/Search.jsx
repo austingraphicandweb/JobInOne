@@ -1,15 +1,40 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import TextField from '@material-ui/core/TextField';
+import Button from '@material-ui/core/Button';
 
-function Stateless() {
-        return (
-            <div>
+const useStyles = makeStyles((theme) => ({
+    root: {
+        '& > *': {
+            margin: theme.spacing(1),
+        },
+    },
+}));
+
+export default function ContainedButtons() {
+    const classes = useStyles();
+    return (
+        <div className="wrapper">
+            <div className={classes.root}>
+                <h2>Search Jobs</h2>
+                {/**
+             * input form
+             */}
+
                 <form className={classes.root} noValidate autoComplete="off">
-                    <TextField id="standard-basic" label="Standard" />
-                    <TextField id="filled-basic" label="Filled" variant="filled" />
-                    <TextField id="outlined-basic" label="Outlined" variant="outlined" />
+                    <TextField id="standard-secondary" label="Job Title" color="secondary" />
+                    <TextField id="standard-secondary" label="Position Level" color="secondary" />
+                    <TextField id="standard-secondary" label="Zip Code" color="secondary" />
                 </form>
+                {/*submit button*/}
+                <Button variant="contained">Search</Button>
             </div>
-        );
-    }
-
-export default Stateless;
+            <div>
+                {/**
+              * show results form.
+              */}
+                <p>Output of results from the api call.</p>
+            </div>
+        </div>
+    );
+}
