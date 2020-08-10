@@ -1,15 +1,21 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import Button from '@material-ui/core/Button';
 
-function Stateless() {
+const useStyles = makeStyles((theme) => ({
+    root: {
+      '& > *': {
+        margin: theme.spacing(1),
+      },
+    },
+  }));
+
+  export default function ContainedButtons() {
+    const classes = useStyles();
         return (
-            <div>
-                <form className={classes.root} noValidate autoComplete="off">
-                    <TextField id="standard-basic" label="Standard" />
-                    <TextField id="filled-basic" label="Filled" variant="filled" />
-                    <TextField id="outlined-basic" label="Outlined" variant="outlined" />
-                </form>
+            <div className={classes.root}>
+                <h2>Search Jobs</h2>
+                <Button variant="contained">Search</Button>
             </div>
         );
     }
-
-export default Stateless;

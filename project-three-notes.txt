@@ -35,3 +35,4 @@ Job sites to place api calls to:
 Elevator pitch:
 Now you can go to one page, fill out specific search parameters, and quickly search multiple job boards all in one place so that you do not have to flip from tab to tab in your browser.
 
+All routes will be in the backend in MERN for the project
