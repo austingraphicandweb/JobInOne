@@ -8,7 +8,6 @@ Create a production schedule
 Pitch my idea to teacher (gas station app)
 gas price api - this connects to my website usings 'FETCH' and 'AXIOS'
 PWA
-https://www.eia.gov/dnav/pet/
 MERN
 Mongoose (Users, search, ect...)
 Express (api routes)
@@ -16,14 +15,23 @@ React (render the before and after of results)
 Node
 
 Deliverables that i need to get ready for the teacher
-Elevator pitch
-ERD
-Wireframe
-
-What type of feature does my app add to the already existing gas apps out there?
---- maybe when and where gas is available
-https://collec tapi.com/api/gasPrice/gas-prices-api/stateUsaPrice
+Elevator pitch (B)
+ERD (A)
+Wireframe (A)
+Pruduction Schedule (A)
 
 For making my ERD...
 https://dbdiagram.io/d
+
+Job sites to place api calls to:
+1. Monster
+
+1. MVP
+	User puts information into a form, an api call is made, and results are returned for the user to see.
+2. User Authentication
+3. Saving results option
+
+
+Elevator pitch:
+Now you can go to one page, fill out specific search parameters, and quickly search multiple job boards all in one place so that you do not have to flip from tab to tab in your browser.
 
