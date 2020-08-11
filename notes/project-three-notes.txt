@@ -43,4 +43,10 @@ My email is austingraphicandweb@gmail.com
 
 Thank you!
 
+1. Monster
+2. GlassDoor
+3. FlexJobs
+4. Ladders
+5. LinkUp
+
 All routes will be in the backend in MERN for the project

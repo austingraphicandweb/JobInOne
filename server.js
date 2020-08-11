@@ -17,3 +17,5 @@ app.get("*", function(req, res) {
 app.listen(PORT, function() {
   console.log(`🌎 ==> API server now on port ${PORT}!`);
 });
+
+//start with setting up the backend using CRUD routes and testing with postman to make sure everything works before plugging everything into the front end.
