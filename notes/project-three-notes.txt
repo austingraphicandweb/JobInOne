@@ -50,3 +50,5 @@ Thank you!
 5. LinkUp
 
 All routes will be in the backend in MERN for the project
+
+Alternative idea to use an api key to search multiple image websites for keywords to use to customize the users computer background.

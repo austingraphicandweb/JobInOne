@@ -13,7 +13,7 @@ const JobSearch = new Schema({
         required: 'You need to specify what level of position you are looking for.'
     },
     zip_code: {
-        type: Int,
+        type: Number,
         required: 'Please enter in a valid zip code.'
     }
 });

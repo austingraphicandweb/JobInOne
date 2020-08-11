@@ -1,2 +1,2 @@
 //serves up all of the models
-module.exports = require('./Jobs');
+module.exports = {Job:require('./Jobs'), User:require('./User')};
