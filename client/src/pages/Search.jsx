@@ -12,11 +12,12 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-
+// instead of job_title, position_level, zip_code i am going to switch it up to save jobs to database and the input fields need to be job_title, company, url, date_found.
 export default function ContainedButtons() {
     const [job_title, setJobTitle] = useState('')
-    const [position_level, setPositionLevel] = useState('')
-    const [zip_code, setZipCode] = useState('')
+    const [company, setCompany] = useState('')
+    const [url, setUrl] = useState('')
+    const [date_found, setDateFound] = useState('')
     const handleClick = () => {
         console.log(job_title)
         API.getJob(job_title).then(response => {
@@ -27,18 +28,19 @@ export default function ContainedButtons() {
     return (
         <div className="wrapper">
             <div className={classes.root}>
-                <h2>Search Jobs</h2>
+                <h2>Add a new job</h2>
                 {/**
              * input form
              */}
 
                 <form className={classes.root} noValidate autoComplete="off">
                     <TextField id="standard-secondary" value={job_title} label="Job Title" color="secondary" onChange={(e) => setJobTitle(e.target.value)} />
-                    <TextField id="standard-secondary" value={position_level} label="Position Level" color="secondary" onChange={(e) => setPositionLevel(e.target.value)} />
-                    <TextField id="standard-secondary" value={zip_code} label="Zip Code" color="secondary" onChange={(e) => setZipCode(e.target.value)} />
+                    <TextField id="standard-secondary" value={company} label="company" color="secondary" onChange={(e) => setCompany(e.target.value)} />
+                    <TextField id="standard-secondary" value={url} label="url" color="secondary" onChange={(e) => setUrl(e.target.value)} />
+                    <TextField id="standard-secondary" value={date_found} label="date_found" color="secondary" onChange={(e) => setDateFound(e.target.value)} />
                 </form>
                 {/*submit button*/}
-                <Button variant="contained" onClick={handleClick}>Search</Button>
+                <Button variant="contained" onClick={handleClick}>Add</Button>
             </div>
             <div>
                 {/**

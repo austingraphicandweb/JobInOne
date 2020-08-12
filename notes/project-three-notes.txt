@@ -52,3 +52,12 @@ Thank you!
 All routes will be in the backend in MERN for the project
 
 Alternative idea to use an api key to search multiple image websites for keywords to use to customize the users computer background.
+
+8/11/2020
+1. Install npm packages
+2. required files within server.js
+3. added app.get info to server.js
+4. added state to search.jsx
+5. initialized API.js to make calls to each websites query url
+6. Added info to user, jobs and index model
+7. initialized passport information within /passport/index.js and localStrategy.js

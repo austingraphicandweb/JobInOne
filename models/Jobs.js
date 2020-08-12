@@ -7,14 +7,20 @@ const JobSearch = new Schema({
         trim: true,
         required: 'The job title is required within the search.'
     },
-    position_level: {
+    company: {
         type: String,
         trim: true,
-        required: 'You need to specify what level of position you are looking for.'
+        required: 'please enter in the name of the password.'
     },
-    zip_code: {
-        type: Number,
-        required: 'Please enter in a valid zip code.'
+    url: {
+        type: String,
+        trim: true,
+        required: 'please enter in the url of the job post.'
+    },
+    date_found: {
+        type: String,
+        trim: true,
+        required: 'please enter in the date of when you found the job'
     }
 });
 
