@@ -1,3 +1,7 @@
+/**
+ * This file might not be necessary since I am not going to do external api calls.
+ */
+
 //make different js sheets to make calls to each different website
 import axios from "axios";
 

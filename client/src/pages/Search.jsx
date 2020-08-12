@@ -42,12 +42,6 @@ export default function ContainedButtons() {
                 {/*submit button*/}
                 <Button variant="contained" onClick={handleClick}>Add</Button>
             </div>
-            <div>
-                {/**
-              * show results form.
-              */}
-                <p>Output of results from the api call will go here.</p>
-            </div>
         </div>
     );
 }
