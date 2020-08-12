@@ -6,7 +6,7 @@ import './footer.css';
 export default function nav() {
   return (
     <div className="footer">
-        <FontAwesomeIcon icon={faPlus} size="3x" />
+        <FontAwesomeIcon icon={faPlus} size="2x" className="icon"/>
     </div>
   );
 }

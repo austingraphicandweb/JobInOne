@@ -4,7 +4,7 @@
     overflow: hidden;
     position: fixed;
     bottom: 0px;
-    height: auto;
+    height: 45px;
     text-align:center;
     width: 98.5%;
   }
@@ -29,4 +29,8 @@
   .footer a.active {
     background-color: #4CAF50;
     color: white;
+  }
+
+  .icon {
+    margin-top: 7px;
   }
