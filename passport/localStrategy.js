@@ -1,4 +1,4 @@
-//this is for loggin into an account
+//this is for logging into an account
 const db = require('../models')
 const LocalStrategy = require('passport-local').Strategy
 const strategy = new LocalStrategy(
