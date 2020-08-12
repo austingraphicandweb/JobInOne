@@ -12,8 +12,8 @@ function App() {
     <div>
     <Nav />
     <Router>
-    <Route exact path='/home' component={Home} />
-    <Route exact path='/addJob' component={Add} />
+    <Route exact path='/' component={Home} />
+    <Route exact path='/Add' component={Add} />
     <Route exact path='/saves' component={Saves} />
     </Router>    
     <Footer />
