@@ -5,8 +5,8 @@ export default function SimpleTabs() {
   return (
     <div>
       <div className="nav">
-        <a className="active" href="#home">Add</a>
-        <a href="#news">List</a>
+        {/* <Link to="">Add</Link>
+        <Link to="">List</Link> */}
       </div>
     </div>
   );
