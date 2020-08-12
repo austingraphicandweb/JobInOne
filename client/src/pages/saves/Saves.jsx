@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import '../saves/saves.css';
 
 function Saves() {
