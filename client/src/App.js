@@ -9,15 +9,13 @@ import './App.css';
 
 function App() {
   return (
-    <div>
-    <Nav />
     <Router>
+    <Nav />
     <Route exact path='/' component={Home} />
     <Route exact path='/Add' component={Add} />
     <Route exact path='/saves' component={Saves} />
-    </Router>    
     <Footer />
-    </div>
+    </Router>   
   );
 }
 
