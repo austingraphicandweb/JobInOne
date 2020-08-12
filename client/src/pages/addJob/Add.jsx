@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
-import API from '../utils/API';
-import './search.css';
+// import API from '../utils/API';
+import './add.css';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -20,10 +20,10 @@ export default function ContainedButtons() {
     const [url, setUrl] = useState('')
     const [date_found, setDateFound] = useState('')
     const handleClick = () => {
-        console.log(job_title)
-        API.getJob(job_title).then(response => {
-            console.log(response.data);
-        })
+        // console.log(job_title)
+        // API.getJob(job_title).then(response => {
+        //     console.log(response.data);
+        // })
     }
     const classes = useStyles();
     return (
