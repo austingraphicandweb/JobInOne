@@ -11,7 +11,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(
 	session({
-		secret: 'fraggle-rock', //pick a random string to make the hash that is generated secure
+		secret: 'hi', //pick a random string to make the hash that is generated secure
 		resave: false, //required
 		saveUninitialized: false //required
 	})
