@@ -4,8 +4,8 @@ const mongoose = require("mongoose");
 const PORT = process.env.PORT || 3001;
 const app = express();
 const session = require("express-session");
-const userController = require('./controllers/userController');
 const Job = require("./models/Jobs");
+const User = require("./models/User");
 const passport = require("./passport/index");
 // const { Recoverable } = require("repl");
 app.use(express.urlencoded({ extended: true }));
@@ -33,11 +33,11 @@ mongoose.connect(
 
 // Send every request to the React app
 // Define any API routes before this runs
-app.use("/api", userController);
 app.get("*", function(req, res) {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));
 });
 
+//back end posting jobs to database
 app.post("/jobs", (req,res) => {
   const jobPost = new Job({
     job_title: req.body.job_title,
@@ -46,6 +46,23 @@ app.post("/jobs", (req,res) => {
     date_found: req.body.date_found
   });
   jobPost.save((err) => {
+    if (err){
+      res.send("This did not post and you need to retry.");
+    } else {
+      res.send("Post successful");
+    }
+  })
+})
+
+//back end posting user information to database
+app.post("/user", (req,res) => {
+  const userCreate = new User({
+    first_name: req.body.first_name,
+    last_name: req.body.last_name,
+    email: req.body.email,
+    password: req.body.password
+  });
+  userCreate.save((err) => {
     if (err){
       res.send("This did not post and you need to retry.");
     } else {
