@@ -1,24 +1,4 @@
-[{
-        "job_title": "karen",
-        "job_company": "karen@job_company.com",
-        "url": "404-656-7654",
-        "date_found": "marketing"
-    },
+[
     {
-        "job_title": "Joey",
-        "job_company": "joey@job_company.com",
-        "url": "678-565-4554",
-        "date_found": "sales"
-    }, {
-        "job_title": "Terry",
-        "job_company": "terry@job_company.com",
-        "url": "404-200-4847",
-        "date_found": "marketing"
-    },
-    {
-        "job_title": "Jermaine",
-        "job_company": "jermaine@job_company.com",
-        "url": "404-201-9060",
-        "date_found": "sales"
-    }
+}
 ]
