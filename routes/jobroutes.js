@@ -106,3 +106,17 @@ getJobById = async (req, res) => {
         console.log(err)
     })
 }
+
+getJobs = async (req,res) => {
+    await Job.find({}, (err,jobs) => {
+        if (err) {
+            return res.status(400).json({success:false,error:err})
+        }
+        if (!jobs.length) {
+            return res
+                .status(404)
+                .json({success:false, error:'the job was not found...'})
+        }
+        return res.status(200).json({success:true, data:jobs})
+    })
+}
