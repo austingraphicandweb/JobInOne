@@ -4,7 +4,6 @@ const mongoose = require("mongoose");
 const PORT = process.env.PORT || 3001;
 const app = express();
 const session = require("express-session");
-const jobsController = require('./controllers/jobsController');
 const userController = require('./controllers/userController');
 const Job = require("./models/Jobs");
 const passport = require("./passport/index");
@@ -34,7 +33,6 @@ mongoose.connect(
 
 // Send every request to the React app
 // Define any API routes before this runs
-// app.use("/api", jobsController);
 app.use("/api", userController);
 app.get("*", function(req, res) {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));
