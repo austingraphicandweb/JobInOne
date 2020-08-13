@@ -79,6 +79,7 @@ export default function NavTabs() {
           <LinkTab label="Home" href="/Home" {...a11yProps(0)} />
           <LinkTab label="Add" href="/Add" {...a11yProps(0)} />
           <LinkTab label="Saves" href="/Saves" {...a11yProps(1)} />
+          <LinkTab label="Create Account" href="/create" {...a11yProps(0)} />
         </Tabs>
       </AppBar>
     </div>

@@ -8,7 +8,7 @@ const jobsController = require('./controllers/jobsController');
 const userController = require('./controllers/userController');
 const Job = require("./models/Jobs");
 const passport = require("./passport/index");
-const { Recoverable } = require("repl");
+// const { Recoverable } = require("repl");
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(
@@ -34,7 +34,7 @@ mongoose.connect(
 
 // Send every request to the React app
 // Define any API routes before this runs
-app.use("/api", jobsController);
+// app.use("/api", jobsController);
 app.use("/api", userController);
 app.get("*", function(req, res) {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));
