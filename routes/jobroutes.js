@@ -91,3 +91,18 @@ deleteJob = async (req,res) => {
     )
 }
 
+getJobById = async (req, res) => {
+    await Job.findOne({_id:req.params.id}, (err,job) => {
+        if (err) {
+            return res.status(400).json({success:false,error:err})
+        }
+        if (!job) {
+            return res
+                .status(404)
+                .json({success:false,error:'the job was not found :('})
+        }
+        return res.status(200).json({success:true,data:job})
+    }).catch(err => {
+        console.log(err)
+    })
+}
