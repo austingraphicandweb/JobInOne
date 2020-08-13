@@ -75,3 +75,19 @@ updateJob = async (req,res) => {
         })
 }
 
+deleteJob = async (req,res) => {
+    await Job.findOneAndDelete({_id:req.params.id}, (err,job) => {
+        if (err) {
+            return res.status(400).json({success:false, error:err})
+        }
+        if (!job) {
+            return res
+                .status(404)
+                .json({success:false,error:'job is not found...'})
+        }
+        return res.status(200).json({success:true,data:job})
+    }).catch(err => 
+        console.log(err)
+    )
+}
+
