@@ -25,7 +25,6 @@ router.post('/job', (req, res) => {
 // Read a job in the database
 router.get('/job', (req,res) => {
     Job.find({})
-        .populate('jobs')
         .then((foundJobs) => {
             res.json({
                 error:false,
