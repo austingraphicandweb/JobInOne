@@ -29,7 +29,7 @@ export default function NavTabs() {
           onChange={handleChange}
           aria-label="nav tabs example"
         >
-          <Tab label="Home" component={Link} to="/Home" />
+          <Tab label="Home" component={Link} to="/" />
           <Tab label="Add" component={Link} to="/Add" />
           <Tab label="Saved Jobs" component={Link} to="/Saves" />
           <Tab label="Create Account" component={Link} to="/create" />

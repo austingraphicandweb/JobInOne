@@ -13,7 +13,7 @@ function App() {
   return (
     <Router>
     <Nav />
-    <Route exact path='/home' component={Home} />
+    <Route exact path='/' component={Home} />
     <Route exact path='/create' component={Create} />
     <Route exact path='/Add' component={Add} />
     <Route exact path='/saves' component={Saves} />
