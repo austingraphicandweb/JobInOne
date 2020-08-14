@@ -16,6 +16,8 @@ router.post('/signup', (req,res) => {
         password: req.body.password
     }).then(response => {
         res.json(response)
+    }).catch((err) => {
+        res.send('unable to complete the signup process');
     })
 })
 
@@ -39,9 +41,5 @@ router.get('/info', function(req, res) {
         })
     }
 })
-
-// need an update route for adding a job to the user profile
-
-// need a remove route for if they want to take it off of their profile
 
 module.exports = router;
