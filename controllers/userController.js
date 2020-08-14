@@ -8,7 +8,7 @@ router.post("/login",  function (req, res, next) {
 });
 
 
-router.post('/signup', (req,res) => {
+router.post('/createaccount', (req,res) => {
     db.User.create({
         first_name: req.body.first_name,
         last_name: req.body.last_name,
