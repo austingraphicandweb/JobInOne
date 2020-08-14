@@ -75,9 +75,8 @@ class JobsList extends Component {
                 <h1>Saved Jobs</h1>
                 {/*below is where I am using the react way of writing code and taking my html and javascript languages and mixing them together within the properties of each html element. */}
                 < input type="text" onChange={this.handleChange} value={this.state.search} />
-                <button onClick={ev => this.setState({ jobs: [...this.state.jobs, { name: this.state.name }] })}>Type to filter</button>
-                <JobsTable jobs={this.state.jobs} jobsSorted={this.jobsSorted} />
-                <button onClick={this.clearFormField}>Reset</button>
+                <button onClick={this.clearFormField} className="button">Reset</button>
+               <JobsTable jobs={this.state.jobs} jobsSorted={this.jobsSorted}/>
             </div >
         );
     }

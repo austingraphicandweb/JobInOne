@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
@@ -19,12 +20,23 @@ export default function ContainedButtons() {
     const [company, setCompany] = useState('')
     const [url, setUrl] = useState('')
     const [date_found, setDateFound] = useState('')
-    const handleClick = () => {
-        // console.log(job_title)
-        // API.getJob(job_title).then(response => {
-        //     console.log(response.data);
-        // })
+
+    const addJob = (e) => {
+        e.preventDefault();
+        const newJob = {
+            job_title: job_title,
+            company: company,
+            url: url,
+            date_found: date_found
+        }
+        console.log(newJob);
+        axios
+            .post('/job', newJob)
+            .then((response) => {
+                console.log(response)
+            })
     }
+
     const classes = useStyles();
     return (
         <div className="wrapper">
@@ -39,9 +51,9 @@ export default function ContainedButtons() {
                     <TextField id="standard-secondary" value={company} label="company" color="secondary" onChange={(e) => setCompany(e.target.value)} />
                     <TextField id="standard-secondary" value={url} label="url" color="secondary" onChange={(e) => setUrl(e.target.value)} />
                     <TextField id="standard-secondary" value={date_found} label="date_found" color="secondary" onChange={(e) => setDateFound(e.target.value)} />
+                    <br></br><Button variant="contained" onClick={addJob} className="button">Add</Button>
                 </form>
-                {/*submit button*/}
-                <Button variant="contained" onClick={handleClick}>Add</Button>
+                
             </div>
         </div>
     );
