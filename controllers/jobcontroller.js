@@ -12,7 +12,7 @@ createJob = (req, res) => {
 
 const job = new Job(body)
 
-if (!movie){
+if (!job){
     return res.status(400).json({
         success:false,
         error:err
@@ -46,7 +46,7 @@ updateJob = async (req,res) => {
     }
 
     Job.findOne(
-        {_id:req.params.id}, (err,movie) => {
+        {_id:req.params.id}, (err,job) => {
             if (err) {
                 return res.status(404).json({
                     err,

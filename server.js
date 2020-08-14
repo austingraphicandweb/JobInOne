@@ -1,12 +1,24 @@
 const express = require("express");
+const bodyParser = require('body-parser');
+const cors = require('cors');
+const jobsRouter = require('./routes/jobroutes');
 const path = require("path");
 const mongoose = require("mongoose");
 const PORT = process.env.PORT || 3001;
 const app = express();
 const session = require("express-session");
-const Job = require("./models/Jobs");
 const User = require("./models/User");
 const passport = require("./passport/index");
+
+//jobs router
+app.use(bodyParser.urlencoded({extended:true}))
+app.use(cors())
+app.use(bodyParser.json())
+app.get('/', (req,res) => {
+  res.send('hello world')
+})
+app.use('/api', jobsRouter);
+
 // const { Recoverable } = require("repl");
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -36,23 +48,6 @@ mongoose.connect(
 app.get("*", function(req, res) {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));
 });
-
-//back end posting jobs to database
-app.post("/jobs", (req,res) => {
-  const jobPost = new Job({
-    job_title: req.body.job_title,
-    company: req.body.company,
-    url: req.body.url,
-    date_found: req.body.date_found
-  });
-  jobPost.save((err) => {
-    if (err){
-      res.send("This did not post and you need to retry.");
-    } else {
-      res.send("Post successful");
-    }
-  })
-})
 
 //back end posting user information to database
 app.post("/user", (req,res) => {
