@@ -1,6 +1,5 @@
 const express = require("express");
 const bodyParser = require('body-parser');
-const cors = require('cors');
 const jobsRouter = require('./routes/jobroutes');
 const path = require("path");
 const mongoose = require("mongoose");
@@ -12,7 +11,6 @@ const passport = require("./passport/index");
 
 //jobs router
 app.use(bodyParser.urlencoded({extended:true}))
-app.use(cors())
 app.use(bodyParser.json())
 app.get('/', (req,res) => {
   res.send('hello world')

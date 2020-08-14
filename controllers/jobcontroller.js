@@ -1,5 +1,6 @@
 const Job = require('../models/Jobs');
 
+//Create a new job for the database
 createJob = (req, res) => {
     const body = req.body
 
@@ -35,6 +36,22 @@ job
     })
 }
 
+// Read a job in the database
+getJobs = async (req,res) => {
+    await Job.find({}, (err,jobs) => {
+        if (err) {
+            return res.status(400).json({success:false,error:err})
+        }
+        if (!jobs.length) {
+            return res
+                .status(404)
+                .json({success:false, error:'the job was not found...'})
+        }
+        return res.status(200).json({success:true, data:jobs})
+    })
+}
+
+// Update a job that is in the database
 updateJob = async (req,res) => {
     const body = req.body
 
@@ -75,6 +92,7 @@ updateJob = async (req,res) => {
         })
 }
 
+// Delete a job that is in the database
 deleteJob = async (req,res) => {
     await Job.findOneAndDelete({_id:req.params.id}, (err,job) => {
         if (err) {
@@ -89,34 +107,4 @@ deleteJob = async (req,res) => {
     }).catch(err => 
         console.log(err)
     )
-}
-
-getJobById = async (req, res) => {
-    await Job.findOne({_id:req.params.id}, (err,job) => {
-        if (err) {
-            return res.status(400).json({success:false,error:err})
-        }
-        if (!job) {
-            return res
-                .status(404)
-                .json({success:false,error:'the job was not found :('})
-        }
-        return res.status(200).json({success:true,data:job})
-    }).catch(err => {
-        console.log(err)
-    })
-}
-
-getJobs = async (req,res) => {
-    await Job.find({}, (err,jobs) => {
-        if (err) {
-            return res.status(400).json({success:false,error:err})
-        }
-        if (!jobs.length) {
-            return res
-                .status(404)
-                .json({success:false, error:'the job was not found...'})
-        }
-        return res.status(200).json({success:true, data:jobs})
-    })
 }
