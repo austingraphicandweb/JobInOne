@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import '../saves/saves.css';
 import JobsTable from '../../components/jobsTable/jobsTable';
 import axios from 'axios';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+// import { faCoffee, faTrashAlt } from '@fortawesome/free-solid-svg-icons'
 
 //using a class to write the javascript list
 class JobsList extends Component {
@@ -13,7 +15,6 @@ class JobsList extends Component {
         axios 
             .get('/job')
             .then((response) => {
-                console.log(response);
                 this.setState({
                     jobs: response.data.data,
                 })
@@ -26,7 +27,6 @@ class JobsList extends Component {
         axios
             .delete(`jobs/${id}`)
             .then((response) => {
-                console.log(response.data);
                 this.getJobs();
             }).catch((err) => {
                 console.log(err);
@@ -44,7 +44,6 @@ class JobsList extends Component {
     }
     handleChange = (e) => {
         this.setState({search:e.target.value});
-        console.log(this.state.search);
         this.jobsFilter(this.state.search);
     }
 
@@ -54,7 +53,6 @@ class JobsList extends Component {
     }
 
     jobsFilter = (value) => {
-        console.log(this.state.jobs)
         //starting at the 0 character i am going the length of what I type in and comparing it to the data which will be returned in the new array. it filters by nam
         const jobs = this.state.jobs.filter(job => job.job_title.slice(0, value.length).toLowerCase() === value.toLowerCase() || job.company.slice(0, value.length).toLowerCase() === value.toLowerCase() || job.url.slice(0, value.length).toLowerCase() === value.toLowerCase() || job.date_found.slice(0, value.length).toLowerCase() === value.toLowerCase());
         this.setState({ jobs: jobs });
@@ -77,6 +75,7 @@ class JobsList extends Component {
                 < input type="text" onChange={this.handleChange} value={this.state.search} />
                 <button onClick={this.clearFormField} className="button">Reset</button>
                <JobsTable jobs={this.state.jobs} jobsSorted={this.jobsSorted}/>
+            {/* <FontAwesomeIcon icon={faTrashAlt} /> */}
             </div >
         );
     }
