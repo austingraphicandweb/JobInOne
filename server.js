@@ -1,6 +1,4 @@
 const express = require("express");
-const bodyParser = require('body-parser');
-const jobsRouter = require('./routes/jobroutes');
 const path = require("path");
 const mongoose = require("mongoose");
 const PORT = process.env.PORT || 3001;
@@ -9,15 +7,8 @@ const session = require("express-session");
 const User = require("./models/User");
 const passport = require("./passport/index");
 
-//jobs router
-app.use(bodyParser.urlencoded({extended:true}))
-app.use(bodyParser.json())
-app.get('/', (req,res) => {
-  res.send('hello world')
-})
-app.use('/api', jobsRouter);
+const JobController = require('./controllers/jobcontroller');
 
-// const { Recoverable } = require("repl");
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(
@@ -43,6 +34,7 @@ mongoose.connect(
 
 // Send every request to the React app
 // Define any API routes before this runs
+app.use(JobController);
 app.get("*", function(req, res) {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));
 });
