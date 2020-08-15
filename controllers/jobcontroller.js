@@ -5,7 +5,6 @@ const router = express.Router();
 
 //Create a new job for the database
 router.post('/job', (req, res) => {
-    console.log(req.body);
     Job.create(req.body)
     .then((createdJob) => {
         res.json({

@@ -29,11 +29,9 @@ export default function ContainedButtons() {
             url: url,
             date_found: date_found
         }
-        console.log(newJob);
         axios
             .post('/job', newJob)
             .then((response) => {
-                console.log(response)
             })
     }
 
