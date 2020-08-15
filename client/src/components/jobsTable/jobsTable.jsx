@@ -1,13 +1,14 @@
 import React, {useState} from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTrashAlt } from '@fortawesome/free-solid-svg-icons'
+import '../jobsTable/jobsTable.css';
 
 
 function JobsTable({ jobs, jobsSorted, onDelete, onUpdate }){
     const [editable,setEditable]=useState(false)
     return (
-        <div className="JobsTable">
-            <table>
+        <div>
+            <table className="jobsTable">
                 <thead>
                 <tr>
                     <th onClick={() => jobsSorted('job_title')}>job_title</th>
