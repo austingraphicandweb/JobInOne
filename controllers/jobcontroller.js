@@ -43,9 +43,7 @@ router.get('/job', (req,res) => {
 
 // Update a job that is in the database
 router.put('/job/:id', (req,res) => {
-    Job.findOneAndUpdate({_id: req.params.id}, req.body, {
-        new: true
-    })
+    Job.findOneAndUpdate({_id: req.params.id}, req.body)
     .then((updatedJob) => {
         res.json({
             error:false,
