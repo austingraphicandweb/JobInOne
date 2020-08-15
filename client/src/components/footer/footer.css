@@ -4,9 +4,10 @@
     overflow: hidden;
     position: fixed;
     bottom: 0px;
+    left:0px;
     height: 60px;
     text-align:center;
-    width: 98.5%;
+    width: 100%;
   }
   
   /* Style the links inside the navigation bar */

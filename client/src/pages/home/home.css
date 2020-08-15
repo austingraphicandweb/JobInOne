@@ -1,5 +1,12 @@
-body {
+/* body {
     background: url(./home-background.jpg);
     background-size: 100%;
 
+} */
+.homeBackground {
+    background-image: url(./home-page-background.png);
+    background-repeat: no-repeat;
+    height: 519px;
+    background-position:center top;
+    background-size: 100% 150%;
 }
