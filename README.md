@@ -6,20 +6,20 @@
 ### 1. Usage <br>
 ### 2. License<br>
 
-link to repository:
-link to deployed application:
+link to repository: https://github.com/austingraphicandweb/JobInOne
+link to deployed application: https://stark-ocean-77546.herokuapp.com/
 <hr>
 
 ## Screenshot
 
-![screenshot]()
+![screenshot](./misc/screenshot.PNG)
 
 
 <hr>
 
 
 ## Usage
-<i>Now you can go to one page, fill out specific search parameters, and quickly search multiple job boards all in one place so that you do not have to flip from tab to tab in your browser.<i>
+<i>With JobInOne I now have the ability to search for jobs and save all of the information from my search to a database, and view the results on a webpage.<i>
 <hr>
 
 ## Licensing
