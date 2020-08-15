@@ -32,8 +32,8 @@ export default function NavTabs() {
           <Tab label="Home" component={Link} to="/" />
           <Tab label="Add" component={Link} to="/Add" />
           <Tab label="Saved Jobs" component={Link} to="/Saves" />
-          <Tab label="Create Account" component={Link} to="/create" />
-          <Tab label="Login" component={Link} to="/login" />
+          {/* <Tab label="Create Account" component={Link} to="/create" />
+          <Tab label="Login" component={Link} to="/login" /> */}
         </Tabs>
       </AppBar>
     </div>
