@@ -24,9 +24,10 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 // Connect to the Mongo DB
+mongoose.Promise=global.Promise;
 mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://localhost/jobinone",
-  { useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true }
+  process.env.MONGODB_URI || "mongodb://heroku_6mb711vl:.4Mg3ZXfVm#v3SQ@ds061676.mlab.com:61676/heroku_6mb711vl",
+  { useMongoClient:true}
 );
 // Send every request to the React app
 // Define any API routes before this runs
