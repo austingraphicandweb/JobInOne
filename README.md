@@ -1,4 +1,4 @@
-# Project three
+# JobInOne
 
 ## By Austin Keener <br>
 ### <i>These are the terms of installation for this code.<i>
