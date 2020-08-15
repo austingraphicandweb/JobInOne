@@ -1,3 +1,8 @@
 .jobsTable {
-    margin: 0px auto;
+    margin: 25px auto;
+}
+
+td, tr, th {
+    padding-left: 25px;
+    text-align:center;
 }
