@@ -6,7 +6,8 @@
 .homeBackground {
     background-image: url(./home-page-background.png);
     background-repeat: no-repeat;
-    height: 519px;
+    height: 600px;
+    width: 100%;
     background-position:center top;
-    background-size: 100% 150%;
+    background-size: 105% 150%;
 }

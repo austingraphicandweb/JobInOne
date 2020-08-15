@@ -4,10 +4,13 @@ import './home.css';
 function Home() {
     return (
         <div className="homeBackground">
-            <div className="opacity"></div>
-            {/* <h2>JobInOne - Where will you end up?</h2> */}
+            {/* <div className="buttons">
+                <button href="/add" className="btn">Start adding jobs</button>
+                <button href="/saves" className="btn">View previously added jobs</button>
+            </div> */}
+
         </div>
     );
-    }
+}
 
-    export default Home;
+export default Home;
