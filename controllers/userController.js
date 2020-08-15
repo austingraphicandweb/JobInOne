@@ -29,14 +29,12 @@ router.get("/logout", function(req, res) {
 
 //user route that sends back information for the currently logged in user
 router.get('/info', function(req, res) {
-    console.log(req.user)
     if (req.user) {
         db.User.findOne(
             {
                 _id: req.user._id
             }
         ).then(dbUser => {
-            console.log(dbUser)
             res.json(dbUser)
         })
     }
