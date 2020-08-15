@@ -19,6 +19,7 @@ app.use(
 app.use(passport.initialize())
 app.use(passport.session())
 
+app.use(express.static(path.join(__dirname, 'client', 'build')))
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
   app.get("*", function(req, res) {
