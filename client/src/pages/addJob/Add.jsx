@@ -23,7 +23,7 @@ export default function ContainedButtons() {
 
     const addJob = (e) => {
         e.preventDefault();
-        const newJob = {
+        const newJob = { 
             job_title: job_title,
             company: company,
             url: url,

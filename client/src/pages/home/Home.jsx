@@ -3,9 +3,10 @@ import './home.css';
 
 function Home() {
     return (
-            <div>
-                <h2>Hello and welcome</h2>
-            </div>
+        <div className="homeBackground">
+            <div className="opacity"></div>
+            {/* <h2>JobInOne - Where will you end up?</h2> */}
+        </div>
     );
     }
 
