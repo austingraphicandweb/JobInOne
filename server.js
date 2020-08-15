@@ -18,9 +18,12 @@ app.use(
 )
 app.use(passport.initialize())
 app.use(passport.session())
+
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
-  app.use(express.static("client/build"));
+  app.get("*", function(req, res) {
+    res.sendFile(path.join(__dirname, "./client/build/index.html"));
+  });
 }
 // Connect to the Mongo DB
 mongoose.connect(
@@ -31,9 +34,9 @@ mongoose.connect(
 // Define any API routes before this runs
 app.use(JobController);
 app.use(UserController);
-app.get("*", function(req, res) {
-  res.sendFile(path.join(__dirname, "./client/build/index.html"));
-});
+// app.get("*", function(req, res) {
+//   res.sendFile(path.join(__dirname, "./client/build/index.html"));
+// });
 app.listen(PORT, function() {
   console.log(`🌎 ==> API server now on port ${PORT}!`);
 });
