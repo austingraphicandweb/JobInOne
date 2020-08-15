@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import '../saves/saves.css';
 import JobsTable from '../../components/jobsTable/jobsTable';
 import axios from 'axios';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-// import { faCoffee, faTrashAlt } from '@fortawesome/free-solid-svg-icons'
 
 //using a class to write the javascript list
 class JobsList extends Component {
@@ -25,7 +23,7 @@ class JobsList extends Component {
 
     deleteJob = (id) => {
         axios
-            .delete(`jobs/${id}`)
+            .delete(`/job/${id}`)
             .then((response) => {
                 this.getJobs();
             }).catch((err) => {
@@ -66,6 +64,19 @@ class JobsList extends Component {
         })
         this.setState({ jobs: jobs });
     }
+    updateJob = (id,property,value) => {
+        if(value.length < 3){
+            return
+        }
+        // creating an empty object that will be filled with the information from the api call
+        let job = {}
+        job[property]=value
+            axios
+                .put(`/job/${id}`, job)
+                .then((response) => {
+                    this.getJobs();
+                })
+    }
     //this is where I am writing out what is going to be on the web page for the user to see. It is a mix of html and javascript using react. A big difference is the usage of curleys instead of perenthesies for the properties on each line. This allows me to incorporate javascript directly into the html and traverse the object at the top of this document so that the output is dynamic and uses 'hot reloading'
     render() {
         return (
@@ -74,8 +85,7 @@ class JobsList extends Component {
                 {/*below is where I am using the react way of writing code and taking my html and javascript languages and mixing them together within the properties of each html element. */}
                 < input type="text" onChange={this.handleChange} value={this.state.search} />
                 <button onClick={this.clearFormField} className="button">Reset</button>
-               <JobsTable jobs={this.state.jobs} jobsSorted={this.jobsSorted}/>
-            {/* <FontAwesomeIcon icon={faTrashAlt} /> */}
+               <JobsTable jobs={this.state.jobs} jobsSorted={this.jobsSorted} onDelete={this.deleteJob} onUpdate={this.updateJob} />
             </div >
         );
     }
