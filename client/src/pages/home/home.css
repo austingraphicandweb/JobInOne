@@ -37,3 +37,10 @@
 .btn {
 margin: 10px;
 }
+
+.content {
+    margin:auto;
+    width: 400px;
+    height: 200px;
+    overflow:hidden;
+}
