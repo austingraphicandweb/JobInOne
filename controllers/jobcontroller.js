@@ -3,6 +3,7 @@ const express = require("express");
 const router = express.Router();
 
 
+
 //Create a new job for the database
 router.post('/job', (req, res) => {
     Job.create(req.body)
