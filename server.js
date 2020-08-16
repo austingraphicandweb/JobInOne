@@ -29,14 +29,14 @@ if (process.env.NODE_ENV === "production") {
 // Connect to the Mongo DB
 mongoose.Promise=global.Promise;
 mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://localhost/jobinone",
+  process.env.MONGODB_URI || "mongodb://user:password1@ds119585.mlab.com:19585/heroku_pdqtjk6s",
   { useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true }
 );
 // Send every request to the React app
 // Define any API routes before this runs
 app.use(JobController);
 app.use(UserController);
-// app.get("*", function(req, res) {
+// app.get("*", functgiion(req, res) {
 //   res.sendFile(path.join(__dirname, "./client/build/index.html"));
 // });
 app.listen(PORT, function() {
