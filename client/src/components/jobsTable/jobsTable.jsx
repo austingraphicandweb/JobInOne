@@ -22,27 +22,27 @@ function JobsTable({ jobs, jobsSorted, onDelete, onUpdate }){
                 <tbody>
                 {jobs.map(job => (
                     <tr>
-                        <td>
+                        <td className="td">
                         {!editable?<span onClick={() => setEditable(true)}>{job.job_title}</span>:(
                           <input placeholder={job.job_title} onBlur={(ev) => onUpdate(job._id,'job_title',ev.target.value)} />  
                         )}
                         </td>
-                        <td>
+                        <td className="td">
                         {!editable?<span onClick={() => setEditable(true)}>{job.company}</span>:(
                           <input placeholder={job.company} onBlur={(ev) => onUpdate(job._id,'company',ev.target.value)} />  
                         )}
                         </td>
-                        <td>
+                        <td className="td">
                         {!editable?<span onClick={() => setEditable(true)}>{job.url}</span>:(
                           <input placeholder={job.url} onBlur={(ev) => onUpdate(job._id,'url',ev.target.value)} />  
                         )}
                         </td>
-                        <td>
+                        <td className="td">
                         {!editable?<span onClick={() => setEditable(true)}>{job.date_found}</span>:(
                           <input placeholder={job.date_found} onBlur={(ev) => onUpdate(job._id,'date_found',ev.target.value)} />  
                         )}
                         </td>
-                        <td><FontAwesomeIcon icon={faTrashAlt} onClick={() => onDelete(job._id)} /></td>
+                        <td className="td"><FontAwesomeIcon icon={faTrashAlt} onClick={() => onDelete(job._id)} /></td>
                     </tr>
                 ))}
                 </tbody>

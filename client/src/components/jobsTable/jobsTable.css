@@ -5,4 +5,11 @@
 td, tr, th {
     padding-left: 25px;
     text-align:center;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+td {
+    max-width:185px;
+    overflow:hidden;
+    white-space: nowrap;
 }
