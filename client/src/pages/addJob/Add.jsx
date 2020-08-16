@@ -5,6 +5,8 @@ import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 // import API from '../utils/API';
 import './add.css';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -13,6 +15,8 @@ const useStyles = makeStyles((theme) => ({
         },
     },
 }));
+
+toast.configure()
 
 // instead of job_title, position_level, zip_code i am going to switch it up to save jobs to database and the input fields need to be job_title, company, url, date_found.
 export default function ContainedButtons() {
@@ -32,8 +36,13 @@ export default function ContainedButtons() {
         axios
             .post('/job', newJob)
             .then((response) => {
+                toast.success('Job added!');
             })
     }
+
+    // const success = () => {
+    //     toast('Job added!')
+    // }
 
     const classes = useStyles();
     return (

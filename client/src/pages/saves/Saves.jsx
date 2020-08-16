@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import '../saves/saves.css';
 import JobsTable from '../../components/jobsTable/jobsTable';
 import axios from 'axios';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 //using a class to write the javascript list
@@ -27,6 +29,7 @@ class JobsList extends Component {
             .delete(`/job/${id}`)
             .then((response) => {
                 this.getJobs();
+                toast.error('Job deleted!');
             }).catch((err) => {
                 console.log(err);
             })
@@ -76,6 +79,7 @@ class JobsList extends Component {
                 .put(`/job/${id}`, job)
                 .then((response) => {
                     this.getJobs();
+                    toast.warning('Job Updated!');
                 })
     }
     //this is where I am writing out what is going to be on the web page for the user to see. It is a mix of html and javascript using react. A big difference is the usage of curleys instead of perenthesies for the properties on each line. This allows me to incorporate javascript directly into the html and traverse the object at the top of this document so that the output is dynamic and uses 'hot reloading'
