@@ -12,20 +12,17 @@ class JobsList extends Component {
     componentDidMount(){
         this.getJobs();
     }
-    // getJobs = () => {
-    //     axios 
-    //         .get('/job')
-    //         .then((response) => {
-    //             this.setState({
-    //                 jobs: response.data.data,
-    //             })
-    //         }).catch((err) => {
-    //             console.log(err)
-    //         })
-    // }
 
     getJobs = () => {
-        location.reload();
+        axios 
+            .get('/job')
+            .then((response) => {
+                this.setState({
+                    jobs: response.data.data,
+                })
+            }).catch((err) => {
+                console.log(err)
+            })
     }
 
     deleteJob = (id) => {
