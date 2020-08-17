@@ -27,7 +27,7 @@ export default function ContainedButtons() {
 
     const addJob = (e) => {
         e.preventDefault();
-        const newJob = { 
+        const newJob = {
             job_title: job_title,
             company: company,
             url: url,
@@ -60,7 +60,7 @@ export default function ContainedButtons() {
                     <TextField id="standard-secondary" value={date_found} label="date_found" color="secondary" onChange={(e) => setDateFound(e.target.value)} />
                     <br></br><Button variant="contained" onClick={addJob} className="button">Add</Button>
                 </form>
-                
+
             </div>
         </div>
     );

@@ -4,7 +4,7 @@ import logo from '../footer/logo.png';
 export default function nav() {
   return (
     <div className="footer">
-        <img src={logo} alt="Logo" className="logo" />
+      <img src={logo} alt="Logo" className="logo" />
     </div>
   );
 }

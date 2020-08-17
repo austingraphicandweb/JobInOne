@@ -1,26 +1,31 @@
-/* body {
-    background: url(./home-background.jpg);
-    background-size: 100%;
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
 
-} */
+.header {
+    position: absolute;
+    top: 25%;
+    left:50%;
+    transform:translate(-50%,-50%);
+}
 .homeBackground {
-    background-image: url(./home-background.jpg);
+    background-image: url(./greetings.png);
     background-repeat: no-repeat;
     height: 600px;
     width: 100%;
-    background-position:center center;
-    background-size: 100% 100%;
+    background-position: center center;
+    background-size: 80% 80%;
 }
 
 .text {
     font-family: Arial, Helvetica, sans-serif;
-    color:white;
-    text-align:center;
+    color: #ffffff;
+    text-align: center;
 }
 
 .head {
     font-size: 75px;
-    margin:0px;
+    margin: 0px;
 }
 
 .subhead {
@@ -28,19 +33,6 @@
     margin-top: -5px;
 }
 
-.buttons {
-    text-align:center;
-    width: 400px;
-    height: 200px;
-    margin: auto;
-}
-.btn {
-margin: 10px;
-}
-
-.content {
-    margin:auto;
-    width: 400px;
-    height: 200px;
-    overflow:hidden;
+.container {
+    background-color:black;
 }
