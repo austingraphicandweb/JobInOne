@@ -20,6 +20,7 @@ class JobsList extends Component {
                 console.log(err)
             })
     }
+    // this refreshes the page when the function is called
     refresh = () => {
         this.props.history.push("/temp")
         this.props.history.goBack()
@@ -87,7 +88,7 @@ class JobsList extends Component {
         axios
             .put(`/job/${id}`, job)
             .then((response) => {
-                this.getJobs();
+                this.getJobs(); 
                 toast.success('Job Updated!');
                 window.location.reload();
             })
