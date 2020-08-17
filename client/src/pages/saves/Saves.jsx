@@ -67,6 +67,7 @@ class JobsList extends Component {
         const jobs = this.state.jobs.filter(job => job.job_title.slice(0, value.length).toLowerCase() === value.toLowerCase() || job.company.slice(0, value.length).toLowerCase() === value.toLowerCase() || job.url.slice(0, value.length).toLowerCase() === value.toLowerCase() || job.date_found.slice(0, value.length).toLowerCase() === value.toLowerCase());
         this.setState({ jobs: jobs });
     }
+    // this function corresponds with the jobsTable.jsx page. When a table head is clicked, the corresponding table row is then sorted based off of the logic below.
     jobsSorted = (property) => {
         //sorting from a to z. It is a public domain algorithm. If the data is out of order then it switches otherwise it does nothing.
         const jobs = this.state.jobs.sort(function (a, b) {
@@ -77,9 +78,9 @@ class JobsList extends Component {
         this.setState({ jobs: jobs });
     }
     updateJob = (id, property, value) => {
-        if (value.length < 3) {
-            return
-        }
+        // if (value.length < 3) {
+        //     return
+        // }
         // creating an empty object that will be filled with the information from the api call
         let job = {}
         job[property] = value

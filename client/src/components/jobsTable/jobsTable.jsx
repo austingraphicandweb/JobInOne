@@ -5,12 +5,16 @@ import '../jobsTable/jobsTable.css';
 
 
 function JobsTable({ jobs, jobsSorted, onDelete, onUpdate }) {
+  //setting state that is going to be used throughout the rest of the page
   const [editable, setEditable] = useState(false)
   return (
     <div>
       <table className="jobsTable">
         <thead>
           <tr>
+            {/**
+             * When a table is clicked, then then each data row is sorted by using the jobsSorted function which is stored on the Saves.jsx page.
+             */}
             <th onClick={() => jobsSorted('job_title')}>job_title</th>
             <th onClick={() => jobsSorted('company')}>company</th>
             <th onClick={() => jobsSorted('url')}>url</th>
@@ -20,8 +24,14 @@ function JobsTable({ jobs, jobsSorted, onDelete, onUpdate }) {
           </tr>
         </thead>
         <tbody>
+          {/**
+           * 
+           */}
           {jobs.map(job => (
             <tr>
+              {/**
+               * Using a conditional operator to edit the tables. The conditional operator sits on top of the input field and when the table cell is clicked, it allows the table cell to be edited and updated by the user.
+               */}
               <td className="td">
                 {!editable ? <span onClick={() => setEditable(true)}>{job.job_title}</span> : (
                   <input placeholder={job.job_title} onBlur={(ev) => onUpdate(job._id, 'job_title', ev.target.value)} />

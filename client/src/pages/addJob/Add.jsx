@@ -20,6 +20,7 @@ toast.configure()
 
 // instead of job_title, position_level, zip_code i am going to switch it up to save jobs to database and the input fields need to be job_title, company, url, date_found.
 export default function ContainedButtons() {
+    // this is where state is added and referred to throughout the rest of the code on the page
     const [job_title, setJobTitle] = useState('')
     const [company, setCompany] = useState('')
     const [url, setUrl] = useState('')
@@ -36,6 +37,7 @@ export default function ContainedButtons() {
         axios
             .post('/job', newJob)
             .then((response) => {
+                //setting the form fields to empty onClick
                 setJobTitle('');
                 setCompany('');
                 setUrl('');
