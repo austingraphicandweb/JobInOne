@@ -36,13 +36,13 @@ export default function ContainedButtons() {
         axios
             .post('/job', newJob)
             .then((response) => {
+                setJobTitle('');
+                setCompany('');
+                setUrl('');
+                setDateFound('');
                 toast.success('Job added!');
             })
-    }
-
-    // const success = () => {
-    //     toast('Job added!')
-    // }
+        }
 
     const classes = useStyles();
     return (
