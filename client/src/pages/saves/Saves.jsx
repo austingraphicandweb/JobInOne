@@ -46,6 +46,9 @@ class JobsList extends Component {
     }
     handleChange = (e) => {
         this.setState({ search: e.target.value });
+        if(this.state.search === '') {
+            this.getJobs();
+        }
         this.jobsFilter(this.state.search);
     }
     clearFormField = () => {
