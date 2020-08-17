@@ -45,16 +45,23 @@ class JobsList extends Component {
         sortedJobs: []
     }
     handleChange = (e) => {
-        this.setState({ search: e.target.value });
-        if(this.state.search === '') {
-            this.getJobs();
-        }
+        //setting state and updating with context from user and then after everything is deleted and there is nothing
+        //in the form field then it does a callback and re-serves all the jobs again. The callback allows me to use the updated state immediately.
+        this.setState({
+            search:e.target.value
+            //required callback function
+        }, () => {
+            if(this.state.search === ''){
+                this.getJobs();
+            }
+        })
         this.jobsFilter(this.state.search);
     }
     clearFormField = () => {
         this.setState({ search: '' })
         this.refresh();
     }
+    
     jobsFilter = (value) => {
         //starting at the 0 character i am going the length of what I type in and comparing it to the data which will be returned in the new array. it filters by nam
         const jobs = this.state.jobs.filter(job => job.job_title.slice(0, value.length).toLowerCase() === value.toLowerCase() || job.company.slice(0, value.length).toLowerCase() === value.toLowerCase() || job.url.slice(0, value.length).toLowerCase() === value.toLowerCase() || job.date_found.slice(0, value.length).toLowerCase() === value.toLowerCase());
@@ -80,7 +87,8 @@ class JobsList extends Component {
             .put(`/job/${id}`, job)
             .then((response) => {
                 this.getJobs();
-                toast.warning('Job Updated!');
+                toast.success('Job Updated!');
+                window.location.reload();
             })
     }
     //this is where I am writing out what is going to be on the web page for the user to see. It is a mix of html and javascript using react. A big difference is the usage of curleys instead of perenthesies for the properties on each line. This allows me to incorporate javascript directly into the html and traverse the object at the top of this document so that the output is dynamic and uses 'hot reloading'
