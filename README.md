@@ -19,7 +19,7 @@ link to deployed application: https://stark-ocean-77546.herokuapp.com/
 
 
 ## Usage
-<i>With JobInOne I now have the ability to search for jobs and save all of the information from my search to a database, and view the results on a webpage.<i>
+<i>With JobInOne I now have the ability to search for jobs and save information from my search to a database where I can view, read, update, and delete information in the future. <i>
 <hr>
 
 ## Licensing
