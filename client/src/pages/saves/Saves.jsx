@@ -52,7 +52,7 @@ class JobsList extends Component {
             search:e.target.value
             //required callback function
         }, () => {
-            if(this.state.search === ''){
+            if(this.state.search === ""){
                 this.getJobs();
             }
         })
