@@ -260,7 +260,7 @@
     }
     .header {
         position: absolute;
-        top: 35%;
+        top: 25%;
         left: 50%;
         color: #007bff;
         transform: translate(-50%, -50%);
@@ -271,7 +271,7 @@
         top: 60%;
         left: 50%;
         transform: translate(-50%, -50%);
-        width: 300px;
-        height: 200px;
+        width:  500px;
+        height: 300px;
     }
 }
