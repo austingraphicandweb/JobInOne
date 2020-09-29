@@ -14,7 +14,7 @@
 .homeBackground {
     background-image: url(./greetings.png);
     background-repeat: no-repeat;
-    height: 600px;
+    height: auto;
     width: 100%;
     background-position: center center;
     background-size: 80% 80%;
