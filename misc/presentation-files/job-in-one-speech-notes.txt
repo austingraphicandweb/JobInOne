@@ -1,0 +1,21 @@
+Hello,
+My name is Austin Keener. I am from Atlanta Georgia. Today, I am going to be showing you some of the features of my up and coming new website. What is this website? Well, the name is JobInOne. Why is it called this? Well, it is because my vision for this website is for the user to be able to view multiple job boards all in one place, and easily be able to search by keyword for jobs, and save those jobs to a database using the logic that I put together so that they can apply for the jobs at a later date and time.
+
+What is the logic that I am going to be showing? Well, as of today, this website allows the user to take information that is gathered externally from a job board and allows the user to plug in the important keywords into a form. The form information is saved to a database and then displayed on a webpage for the user to view.
+
+Possible objections to current state of the website.
+Q. Was this logic all done by you and no one else.
+A. While I did spend time with a few different tutors due to time constraints to help me with some of the more complex features, I was responsible for spending most of my day for about a week putting together what you see before you.
+
+Q. How will I corporate multiple job boards into the website in the future?
+A. My goal is to have a website that is in a state of finishedness that will be acceptable to the developer programs for job boards like Monster and Indeed so that I can get the unique API information and display search results from their website onto my website. The display will be based off of the seach parameters of the user of the website which means that I will have a custom query URL and using template strings will allow each individual user to put custom information into the API call so that the results are based around what they want to see.
+
+Q. What is your biggest concern at this point with the UX of the website? 
+A. To me the biggest concern is with the user having the ability to edit existing information in the database. I am not referring to being able to replace existing information, but am actually referring to the ability to click on a certain part of the string in each column and edit a part of what alread exists.
+
+
+The nav bar and footer are react bootstrap for each page of the website, and the content in between on the home page was done with html and css. 
+
+On the form page I used stateful components so that I could change the props with couples with Axios to send data to the database for the user to view and see at a later date and time on the next webpage. The styling of the form is material ui.
+
+The saves page is also using axios. On the saves page the user has the ability to read, update, and delete the content that was created through the form page. The user also has the ability to sort and filter. This part was tricky. 

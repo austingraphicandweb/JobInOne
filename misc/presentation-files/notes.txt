@@ -1,0 +1,37 @@
+Overall goal:
+to make the UX with finding a new career easier and less of a hassle. I called it this because when the project comes fully to completion the user will be able to take the logic that I put together for your viewing today, and couple it with the ability to view multiple job websites at one time.
+
+Motivation:
+It is why I am presenting to you today. To help users that might be in the situation I have found myself in today, feel less stress during a career change.
+
+Technologies Used:
+
+Navigation and Footer
+1. HTML
+2. CSS
+3. Material UI
+4. React router dom for linking the user from page to page.
+
+Home page
+1. HTML
+2. CSS
+
+Form page
+1. HTML
+2. CSS
+3. JavaScript
+4. Axios
+5. Material UI for styling of buttons
+6. Toastr for the alerts
+
+Saves page
+1. React state logic
+1.5. Axios
+2. Javascript
+3. HTML
+4. CSS
+
+Backend
+1. Mongoose
+2. Node
+3. React-express
